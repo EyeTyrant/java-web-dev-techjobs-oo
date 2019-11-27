@@ -6,7 +6,7 @@ public class Employer {
     private int id;
     private static int nextId = 1;
     private String value;
-
+// Constructors
     public Employer() {
         id = nextId;
         nextId++;
