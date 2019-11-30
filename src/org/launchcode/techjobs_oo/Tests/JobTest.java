@@ -18,8 +18,8 @@ public class JobTest {
 
   @Test
   public void testSettingJobId(){
-    Job myJob1 =  new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-    Job myJob2 =  new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+    Job myJob1 = new Job();
+    Job myJob2 = new Job();
     assertFalse(myJob1.equals(myJob2));
   }
   @Test
@@ -38,6 +38,12 @@ public class JobTest {
     assertTrue(myJob3.getCoreCompetency() instanceof CoreCompetency);
     assertEquals("Persistence", myJob3.getCoreCompetency().toString());
 
+  }
+  @Test
+  public void testJobsForEquality(){
+    Job myJob4 =  new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+    Job myJob5 =  new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+    assertFalse(myJob4.equals(myJob5));
   }
 
 }
