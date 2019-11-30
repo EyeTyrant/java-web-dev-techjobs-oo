@@ -20,8 +20,23 @@ public abstract class JobField {
 
   @Override
   public String toString() {
-    return value;
+//    if (this.getId() > 0 && value.equals("")){
+//      return altToString();
+//  }
+    if (value.equals("")){
+      return "Data not available";
+    }
+    else {
+      return value;
+    }
   }
+
+
+//  public String altToString(){
+//
+//      return "OOPS! This job does not seem to exist.";
+//  }
+
 
   @Override
   public boolean equals(Object o) {  // Two objects are equal if they have the same id.

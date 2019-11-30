@@ -15,7 +15,6 @@ public class JobTest {
     myJob1 =  new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
     myJob2 =  new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
   }
-
   @Test
   public void testSettingJobId(){
     myJob1 = new Job();
@@ -44,17 +43,26 @@ public class JobTest {
 //    Job myJob2 =  new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
     assertFalse(myJob1.equals(myJob2));
   }
-
+  @Test
+  public void testEmptyField(){
+    Job myJob6 =  new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+    assertEquals("Data not available", myJob6.getEmployer().toString());
+  }
+//  @Test
+//  public void testIdAndAllEmptyFields(){
+//    Job myJob7 =  new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+//    assertEquals("OOPS! This job does not seem to exist.", myJob7);
+//  }
   @Test
   public void toStringTest(){
-//    Job myJob6 =  new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+//    Job myJob7 =  new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 //    System.out.println(myJob1);
-    assertEquals("ID: " + "3" +"\n"+
+    assertEquals("\n" + "ID: " + "1" + "\n" +
         "Name: " + "Product tester" + "\n" +
-        "Employer: " + "ACME" + "\n"+
-        "Location: " + "Desert" + "\n"+
-        "Position Type: " + "Quality control" +"\n"+
-        "Core Competency: " + "Persistence", myJob1.toString());
+        "Employer: " + "ACME" + "\n" +
+        "Location: " + "Desert" + "\n" +
+        "Position Type: " + "Quality control" + "\n" +
+        "Core Competency: " + "Persistence" + "\n", myJob1.toString());
   }
 
 }
