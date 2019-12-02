@@ -20,14 +20,10 @@ public abstract class JobField {
 
   @Override
   public String toString() {
-//    if (this.getId() > 0 && value.equals("")){
-//      return altToString();
-//  }
     if (value.equals("")){
       return "Data not available";
-    }
-    else {
-      return value;
+    } else {
+        return value;
     }
   }
 

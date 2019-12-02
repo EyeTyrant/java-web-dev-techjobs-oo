@@ -51,12 +51,12 @@ public class JobTest {
 //  @Test
 //  public void testIdAndAllEmptyFields(){
 //    Job myJob7 =  new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
-//    assertEquals("OOPS! This job does not seem to exist.", myJob7);
+//    assertEquals("OOPS! This job does not seem to exist.", myJob7.toString());
 //  }
   @Test
   public void toStringTest(){
 //    Job myJob7 =  new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-//    System.out.println(myJob1);
+    System.out.println(myJob1);
     assertEquals("\n" + "ID: " + "1" + "\n" +
         "Name: " + "Product tester" + "\n" +
         "Employer: " + "ACME" + "\n" +

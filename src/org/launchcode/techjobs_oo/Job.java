@@ -97,12 +97,16 @@ public class Job {
 
     @Override
     public String toString() {
-        return "\n" +
-            "ID: " + this.getId() + "\n" +
-            "Name: " + this.getName() + "\n" +
-            "Employer: " + this.getEmployer() + "\n" +
-            "Location: " + this.getLocation() + "\n" +
-            "Position Type: " + this.getPositionType() + "\n" +
-            "Core Competency: " + this.getCoreCompetency() + "\n";
+//      if (this.getId() > 0 && JobField.value.equals("")){
+//          return "OOPS! This job does not seem to exist.";
+//      } else {
+          return "\n" +
+              "ID: " + this.getId() + "\n" +
+              "Name: " + this.getName() + "\n" +
+              "Employer: " + this.getEmployer() + "\n" +
+              "Location: " + this.getLocation() + "\n" +
+              "Position Type: " + this.getPositionType() + "\n" +
+              "Core Competency: " + this.getCoreCompetency() + "\n";
+//        }
     }
 }
